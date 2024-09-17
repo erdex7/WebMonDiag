@@ -2,7 +2,7 @@
 
 Tool for simulating web application operation and errors, including API (only GET menthod supported).
 Can be useful for setting up and testing monitoring systems, as well as for mocking up a simple API. 
-Can work with Linux and Windows.
+Tested for Linux and Windows.
 
 Capability to control:
  * Listening to ports
@@ -11,6 +11,8 @@ Capability to control:
  * Endpoint path
  * HTTP status code return
  * Returned data (for example, a web page, JSON or XML)
+
+![image](img/gui.png)
  
 ## Implementation details
 
@@ -25,33 +27,27 @@ The application logic is implemented in the `wmdcore` module. The `wmdgui` and `
 
 In root folder with CMakeLists.txt run:
 
-	```shell
-	cmake [-DCMAKE_PREFIX_PATH=/path/to/qt] [-DCMAKE_BUILD_TYPE=Release] -B build
-	cd build
-	```
+```shell
+cmake [-DCMAKE_PREFIX_PATH=/path/to/qt] [-DCMAKE_BUILD_TYPE=Release] -B build
+cd build
+```
 
 ### Linux
 
-Then run `make`:
-
-	```shell	
-	make
-	```
+run `make`
 
 ### Windows 
 
-Visual Studio:
+- Visual Studio:
 
-	```shell
-	`msbuild webmondiag.sln`
-	```
+```shell
+msbuild webmondiag.sln
+```
 	
-MinGW:	
-
-	```shell
-	`mingw32-make`
-	```
-	
+- MinGW:	
+```shell
+mingw32-make
+```
 
 ## Usage examples
 
@@ -59,12 +55,12 @@ MinGW:
 
  - Listen for HTTP requests on port 8080 at 127.0.0.1:
  
-	```shell
-	./wemondi_cli -n 127.0.0.1 -p 8080
-	```
+```shell
+./wemondi_cli -n 127.0.0.1 -p 8080
+```
 
 ### GUI
 
-	```shell
-	./wemondi_gui
-	```
+```shell
+./wemondi_gui
+```
